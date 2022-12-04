@@ -1,0 +1,39 @@
+rule bladabindi
+
+{
+
+        meta:
+
+            Author = "Raj Sugumar"
+
+            Version = "1.0"
+
+            Date = "12/2/2022"
+
+            Description = "Rule for detecting Balabindi Malware"
+
+ 
+
+     strings:
+
+        $a1 = https://dl.dropbox.com/s/p84aaz28t0hepul/Pass.exe?dl=0
+
+        $a2 = "Exsample.exe" wide
+
+        $a3 = "37.235.48.172" wide
+
+        $a4 = "server.exe" wide
+
+        $a5 = "cmd.exe /k ping 0 & del"
+
+        $a6 = "netsh firewall delete allowedprogram"
+
+ 
+
+        condition:
+
+             any of them
+
+ 
+
+}
