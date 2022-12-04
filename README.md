@@ -1,0 +1,2 @@
+# Bladabindi-njrat-Yara
+Yara 
